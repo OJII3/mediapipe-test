@@ -13,7 +13,7 @@ def to_json(landmark_list: NormalizedLandmarkList) -> str:
     return json.dumps(
         [
             {
-                "index": index,
+                "id": index,
                 "x": landmark.x,
                 "y": landmark.y,
                 "z": landmark.z,

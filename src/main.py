@@ -84,7 +84,7 @@ def main() -> None:
             debug_image = numpy.where(mask, debug_image, bg_resize_image)
         if results.pose_landmarks is not None:
             if (cnt % 10) == 0:
-                print(to_json(results.pose_landmarks))
+                # print(to_json(results.pose_landmarks))
                 client.send(to_json(results.pose_landmarks).encode(), ("localhost", 5000))
             # 外接矩形の計算
             brect = calc_bounding_rect(debug_image, results.pose_landmarks)
