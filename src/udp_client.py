@@ -1,7 +1,7 @@
 import socket
 
 
-class UDPClient:
+class UdpClient:
     def __init__(self, port: int):
         self.port = port
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
